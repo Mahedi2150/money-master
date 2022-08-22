@@ -50,14 +50,18 @@ function save() {
     const saveAmount = parseFloat(document.getElementById("saveField").value)
     const incomeAmount = parseFloat(document.getElementById("incomeField").value)
 
-    const savingAmount = incomeAmount * (saveAmount / 100)
-    document.getElementById("savingId").innerText = savingAmount
+    if (isNaN(saveAmount)) {
+        document.getElementById("saveFieldAleart").classList.remove("d-none")
+    } else {
+        document.getElementById("saveFieldAleart").classList.add("d-none")
 
-    const total = getTotal()
-    const balance = getBalance(incomeAmount, total)
-    const remainingAmount = balance - savingAmount
-    document.getElementById("remainingId").innerText = remainingAmount
-
+        const savingAmount = incomeAmount * (saveAmount / 100)
+        document.getElementById("savingId").innerText = savingAmount
+        const total = getTotal()
+        const balance = getBalance(incomeAmount, total)
+        const remainingAmount = balance - savingAmount
+        document.getElementById("remainingId").innerText = remainingAmount
+    }
 }
 
 

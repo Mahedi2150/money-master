@@ -29,11 +29,11 @@
     </header>
 
     <section>
-        <div class="row gx-2 ">
+        <div class="row row-cols-1 row-cols-md-2 gx-2 ">
             <div class="col ">
              <img class="w-100 rounded " src="./Img/img1.png" alt="" srcset="">
             </div>
-            <div class="col ">
+            <div class="col bg-light rounded-2">
 
                 <div class="alert alert-warning d-none" id="aleart" role="alert">
                     You do not have enough money for expenses
@@ -62,7 +62,7 @@
               </div>
              <div class="row g-3 me-5 mt-1 justify-content-end">
                 <div class="col-auto">
-                  <label for="rentField" class="col-form-label">rent : </label>
+                  <label for="rentField" class="col-form-label">Rent : </label>
                 </div>
                 <div class="col-auto">
                   <input type="number" min="0" oninput="validity.valid||(value='');" id="rentField" class="form-control" >
@@ -84,6 +84,11 @@
                   <h6 class="text-center fw-semibold my-2">Total Expenses : <span id="totalId">0</span> </h6>
                   <h6 class="text-center fw-semibold my-2">Balance : <span id="balanceId">0</span> </h6>
             </div>
+
+
+            <div class="alert alert-warning d-none" id="saveFieldAleart" role="alert">
+                Please input save fields!!!
+                </div>
 
               <div class=" g-3  my-4 justify-content-center d-flex flex-row">
                 <div class="col-auto">
